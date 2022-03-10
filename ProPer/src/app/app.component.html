@@ -1,0 +1,26 @@
+<!-- nav -->
+<div class="navbar">
+  <!--HOME-->
+  <a class="nav-item nav-link" routerLink="/user-info">PROPER</a>
+  <!--USER-INFO-->
+  <a class="nav-item nav-link" routerLink="/user-info" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }">USER-INFO</a>
+  <!--IMPORT-->
+  <a class="nav-item nav-link" routerLink="/excel-import" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }">EXCEL IMPORT</a>
+  <!--EXPORT-->
+  <a class="nav-item nav-link" routerLink="/excel-export" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }">EXCEL EXPORT</a>
+</div>
+
+<!-- main content container -->
+
+<div class="container">
+  <div class="works">
+      
+    <router-outlet></router-outlet>
+      
+  </div>
+</div>
+
+
+<footer class="footer">
+ <p>© 2021 Proper-NIKI Ltd. All rights reserved </p>
+ </footer>

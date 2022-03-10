@@ -1,0 +1,19 @@
+
+
+<!--Vertical line in the middle of the screen-->
+
+  <div 
+    class="verticalLine">
+  </div>
+
+
+<div class="split left">
+  <app-users #appUsers (myEvent)="appInfo.makePieChart()"></app-users>
+</div>
+
+<div class="split right">
+  <app-info #appInfo ></app-info>
+</div>
+
+
+

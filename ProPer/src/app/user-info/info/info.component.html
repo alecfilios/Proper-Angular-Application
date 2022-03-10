@@ -1,0 +1,32 @@
+  <!--Right part of the screen-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+<!--Left part of the screen-->
+<div class="right">
+  <div class="divChart">
+    <canvas id="myChart"></canvas>
+  </div>
+    <!-- List of Projects-->
+    <h3 class="title"> Project with Percentage: </h3>
+    <ul class="propers" id="propers">
+      <li id="proper" *ngFor="let project of projects let i = index" (click)="onSelectProject(makeString(i))" [class.selected]="makeString(i) === selectedProjectIndex">
+        <span contenteditable="false" class="project" id="projectID" >{{project}}</span>
+        <span contenteditable="false" class="percentage" id="percentageID">{{percentagesStr[i]}}</span>
+      </li>
+    </ul>
+  <!-- Add, Edit, Delete -->
+  <div class="buttons">
+    <button [disabled]="addButtonDisabled" mat-button (click)="addProject()">Add</button>
+    <button [disabled]="editButtonDisabled" mat-button (click)="editProject()">Edit</button>
+    <button [disabled]="deleteButtonDisabled" mat-button (click)="deleteProject()">Delete</button>
+  </div>
+  <div class="supportButtons">
+    <button *ngIf="confirmAddButton" mat-button (click)="confirmAdd()">Confirm</button>
+    <button *ngIf="cancelAddButton" mat-button (click)="cancelAdd()">Cancel</button>
+    <button *ngIf="confirmDeleteButton" mat-button (click)="confirmDelete()">Confirm</button>
+    <button *ngIf="cancelDeleteButton" mat-button (click)="cancelDelete()">Cancel</button>
+    <button *ngIf="confirmEditButton" mat-button (click)="confirmEdit()">Confirm</button>
+    <button *ngIf="cancelEditButton" mat-button (click)="cancelEdit()">Cancel</button>
+  </div>
+</div>
+

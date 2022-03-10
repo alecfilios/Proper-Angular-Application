@@ -1,0 +1,35 @@
+/* Split the screen in half */
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 60px; /* TODO: 1 what? probably change to px*/
+    overflow: auto;   
+}
+
+/* Vertical line */
+.verticalLine {
+    top: 60px;
+    left: 50%;
+    border-left: 2px solid rgb(0, 0, 0);
+    height: 90vh; //TODO: fix
+    position: absolute;
+    overflow:clip;
+    margin-left: 0px;
+    
+}
+
+/* Control the left side */
+.left {
+    left: 0%;
+    //background-color: rgb(168, 169, 177);
+    
+}
+
+/* Control the right side */
+.right {
+    left: 50%;
+    //background-color: rgb(168, 169, 177);
+    
+}

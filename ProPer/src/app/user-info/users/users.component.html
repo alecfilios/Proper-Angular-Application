@@ -1,0 +1,33 @@
+
+<!--Left part of the screen-->
+<div class="left">
+    
+    <!-- List of names -->
+    <h2 class="title"> Staff members: </h2>
+    <button class='refreshButton' mat-icon-button (click)="onRefreshbutton()" matTooltip="Fetching data from the server">
+      <mat-icon>autorenew</mat-icon>   
+    </button>
+    <ul class="users">
+      <li id="user" contentEditable="false" *ngFor="let user of users" (click)="onSelect(user)" [class.selected]="user === selectedUser">
+         {{user}}
+      </li>
+    </ul>
+    <!-- Add, Edit, Delete -->
+    <div class="buttons">
+      <button [disabled]="addButtonDisabled" mat-button (click)="addUser()">Add</button>
+      <button [disabled]="editButtonDisabled" mat-button (click)="editUser()">Edit</button>
+      <button [disabled]="deleteButtonDisabled" mat-button (click)="deleteUser()">Delete</button>
+    </div>
+    <div class="supportButtons">
+      <button *ngIf="confirmAddButton" mat-button (click)="confirmAdd()">Confirm</button>
+      <button *ngIf="cancelAddButton" mat-button (click)="cancelAdd()">Cancel</button>
+      <button *ngIf="confirmDeleteButton" mat-button (click)="confirmDelete()">Confirm</button>
+      <button *ngIf="cancelDeleteButton" mat-button (click)="cancelDelete()">Cancel</button>
+      <button *ngIf="confirmEditButton" mat-button (click)="confirmEdit()">Confirm</button>
+      <button *ngIf="cancelEditButton" mat-button (click)="cancelEdit()">Cancel</button>
+    </div>
+
+</div>
+
+
+

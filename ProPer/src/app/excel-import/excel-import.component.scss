@@ -1,0 +1,41 @@
+/*
+  File reader 
+*/
+ .fc{
+    position: absolute;
+    left: 150px;
+    top: 150px;
+ }
+/* Code for the alert text
+ TODO: make it more fancy 
+*/ 
+ .alert{
+    position: absolute;
+    left: 150px;
+    top: 200px;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    padding-left:1%;
+    height:60%;
+    width:80%;
+    overflow:scroll;
+    border:1px solid #000000;
+ }
+/*
+ The image for import has 3 states:
+ - Wait for upload
+ - Not uploaded (Cause of error)
+ - Uploaded
+
+ Later was became an icon from angulare materials
+*/
+.import-icon{
+  position: absolute;
+  left: 550px;
+  top: 150px;
+ }
+
+ 
+
+  
+

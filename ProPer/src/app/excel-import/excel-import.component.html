@@ -1,0 +1,37 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!--File Chooser-->
+<div class="fc">  
+    <input type="file" (change)="onFileChange($event)" multiple ="false" accept=".xls,.xlsx"/>
+</div>
+
+<!--Warning text (variable)-->
+<div id="alertID" class="alert">
+    <p id="alertTextID" style="white-space: pre-line">{{ AlertMessage }}</p>
+</div>
+
+<!--Angular Icons-->
+
+<div *ngIf = "waitIconBool" class="wait-upload-icon">
+    <div class="import-icon">
+        <span class="material-icons">file_upload</span>
+    </div>
+</div>
+
+<div *ngIf = "successIconBool" class="success-upload-icon">
+    <div class="import-icon">
+        <span class="material-icons">file_download_done</span>
+    </div>
+</div>
+
+<div *ngIf = "errorIconBool" class="error-upload-icon">
+    <div class="import-icon">
+        <span class="material-icons">block</span>
+    </div>
+</div>
+
+<div *ngIf = "warningIconBool" class="warning-upload-icon">
+    <div class="import-icon">
+        <span class="material-icons">warning</span>
+    </div>
+</div>
